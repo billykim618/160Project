@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+        <title>Log In Page</title>
+    </head>
+    <body>
+        <h1>Log In</h1>
+        <br><h3>Enter your email address and password to get logged into your account.</h3><br>
+        <br><h3 style="color:red">The email or password you entered is incorrect</h3>
+        <h3 style="color:red">Please try again</h3>
+        <!--<img src="medical.jpg" width="400" alt="medical picture">-->
+        <br>
+        <form id="login-form" action="/login_fail" method="post">
+            <label for="email">Email</label><br>
+            <input type="email" name="email" placeholder="Enter email address"><br><br>
+            <label for="password">Password</label><br>
+            <input type="password" placeholder="Enter password"><br><br>
+            <input type="submit" value="Log In">
+            <!--<button type="submit" name="login-button" form="login-form">Log In</button><br>-->
+        </form>
+        <%- include('partials/nav.ejs') %> 
+    </body>
+</html>

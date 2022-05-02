@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+        <title>Appointment Scheduling Page</title>
+    </head>
+    <form action="/appointment" id="appointment_form" method="POST" accept-charset="UTF-8">
+        <fieldset>
+        <legend>For Paitent</legend>
+        <label>
+            Name: 
+            <%= accountData.firstName %> <%= accountData.lastName %>
+            <!--<input type="text" name="name" required>-->
+        </label>
+        <div>
+            <label>
+            Email Address:
+            <%= accountData.email %>
+            <!--<input type="email" name="email" required>-->
+            </label>
+
+        </div>
+        </fieldset>
+        <fieldset>
+        <legend>Schedule your appointment here, <%= accountData.firstName %> </legend>
+        <div>
+            <label>
+            Choose Date
+            <input type="date" name="appointmentDate" required>
+            </label>
+            <div>
+            <label>
+                <input type="radio" name="morning_afternoon" value="morning" checked>
+
+                <!-- <input type="hidden" name="Morning desired" value="no"> -->
+                <!-- <input type="checkbox" name="Morning desired" value="yes"> -->
+                Morning
+            </label>
+            <label>
+                <!-- <input type="hidden" name="Afternoon desired" value="no"> -->
+                <!-- <input type="checkbox" name="Afternoon desired" value="yes"> -->
+                <input type="radio" name="morning_afternoon" value="afternoon">
+
+                Afternoon
+            </label>
+            </div>
+        </div>
+        <p>Confirmation requested by</p>
+        <div>
+            <label>
+            <input type="radio" name="confirmation" value="email" checked>
+            Email
+            </label>
+            <label>
+            <input type="radio" name="confirmation" value="phoneNumber">
+            Phone call
+            </label>
+            <label for="email"></label><br>
+            <input type="text" name="email" placeholder="Confirm email"><br>
+        </div>
+        </fieldset>
+        <div>
+        <input type="submit" value="Submit request">
+        </div>
+    </form>
+    <%- include('partials/nav2.ejs') %> <br>
+  </html>

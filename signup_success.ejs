@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+        <title>Sign Up Success</title>
+    </head>
+    <body>
+        <h1>You have successfully created your account with this Medical Office, <%= accountData.firstName %>!</h1><br>
+        <h3>Your account has been created, with these spceifications below as you entered.</h3> <br>
+        <ul>
+        <h4>First name: <%= accountData.firstName %></h4>
+        <h4>Last name: <%= accountData.lastName %></h4>
+        <!-- <h4>Date of Birth: <%= accountData.dob %></h4>
+        <h4>Gender: <%= accountData.gender %></h4> -->
+        <h4>Email Address: <%= accountData.email %></h4>
+        </ul>
+    </body>
+    <%- include('partials/nav.ejs') %>  
+</html>

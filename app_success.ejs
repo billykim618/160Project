@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+        <title>Appointment Success</title>
+    </head>
+    <body>
+        <h1>You have successfully made an appointment with this Medical Office!</h1><br>
+        <h3>Your appointment has been created, with these spceifications below as you entered.</h3> <br>
+        <ul>
+        <h4>Appointment Date: <%= appointment.appointmentDate %></h4>
+        <h4>Morning/Afternoon: <%= appointment.morning_afternoon %></h4>
+        <!-- <h4>Date of Birth: <%= appointment.dob %></h4>
+        <h4>Gender: <%= appointment.gender %></h4> -->
+        <h4>Confirmation Sent Via: <%= appointment.email %></h4>
+        </ul>
+    </body>
+    <%- include('partials/nav2.ejs') %>  
+</html>
